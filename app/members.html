@@ -14,6 +14,24 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+  <style>
+    .jumbotron {
+      background: #358CCE;
+      color: #FFF;
+      border-radius: 0px;
+    }
+    .jumbotron-sm { padding-top: 24px;
+      padding-bottom: 24px; }
+    .jumbotron small {
+      color: #FFF;
+    }
+    .h1 {
+      font-size: 24px;
+      float:left;
+
+    }
+  </style>
+
 
 </head>
 <body ng-app="circleKApp">
@@ -50,27 +68,17 @@
 
 
 <section id="page" >
-  <header class="page-header " style = "background-color: #00b3ee ; color: #f7f7f7; margin-top: 0;">
-    <div class="container text-center " >
+  <div class="jumbotron jumbotron-sm">
+    <div class="container">
       <div class="row">
-
-          <img src="images/Trans.png" class="img-fluid "  alt="HIDEO website template">
+        <div class="col-sm-12 col-lg-12">
+          <img src="images/Trans.png" class="img-fluid "  alt="Image not found">
           <h1 class="media-heading">Circle-K Team</h1>
           <p>We're smart, we're young, we're beautiful</p>
-
         </div>
       </div>
-      <!--<div class="row mb30">-->
-        <!--<div class="col-xs-6">-->
-          <!--<img src="images/Trans.png" class="img-fluid" alt="Image not found" >-->
-        <!--</div>-->
-        <!--<div class="col-xs-6 text-left">-->
-          <!--<h1>Circle-K Team</h1>-->
-          <!--<p>We're smart, we're young, we're beautiful</p>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  </header>
+    </div>
+  </div>
 
 
   <section id="team2" class="mt15">
@@ -94,7 +102,7 @@
 
       <div class="row mb30">
         <div class="col-xs-2">
-          <img src="images/ash_bos.jpg" class="img-thumbnail imgBorder rounded" alt="Image not found">
+          <img src="images/ash_bos.jpg" class="img-thumbnail imgBorder rounded " alt="Image not found" style="vertical-align: middle">
         </div>
         <div class="col-xs-10">
           <h3>Ashley Booe &mdash; President</h3>
@@ -126,7 +134,7 @@
 
       <div class="row mb30">
         <div class="col-xs-2">
-          <img src="images/lyn_jon.png" class="img-thumbnail imgBorder rounded " alt="Image not found">
+          <img src="images/lyn_jon.png" style="vertical-align: middle" class="img-thumbnail imgBorder rounded " alt="Image not found">
         </div>
         <div class="col-xs-10">
           <h3>Lyndsay Jones &mdash; Social Chair</h3>

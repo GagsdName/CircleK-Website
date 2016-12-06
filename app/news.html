@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet"
+        href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <style>
+    .carousel-inner {
+      background-color: dimgrey;
+    }
+
+    .carousel-inner > .item > img {
+      height: 700px;
+      width: 100%;
+      object-fit: contain;
+      overflow: hidden;
+      object-position: 50%;
+
+      margin: 0pt 3px;
+    }
+
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+
+    }
+
+    .jumbotron {
+      background: #358CCE;
+      color: #FFF;
+      border-radius: 0px;
+    }
+
+    .jumbotron-sm {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    .jumbotron small {
+      color: #FFF;
+    }
+
+    .h1 {
+      font-size: 24px;
+      float: left;
+
+    }
+
+    snapshot p {
+      display: inline-block;
+    }
+
+    .truncate {
+      white-space: nowrap;
+      width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .snapshot {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      width: 100%;
+      margin: auto auto 25px;
+      padding: 25px;
+    }
+
+  </style>
+
+</head>
+
+<body ng-app="circleKApp">
+<!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="events.html">News and Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="jumbotron jumbotron-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <h1 class="h1">News </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" style="margin-bottom: 50px ">
+
+  <div class="container-fluid">
+    <div clas="row">
+      <div class="col-sm-1 sidenav">
+        <button type="button" class="btn btn-info btn-sm " id="createEvent"><span
+          class="glyphicon glyphicon-plus"></span> Create Event
+        </button>
+      </div>
+      <div class="col-sm-10"></div>
+      <div class="col-sm-1">
+        <button type="button" class="btn btn-info btn-sm sidenav" data-toggle="modal" data-target="#NewsInputModel">
+          <span class="glyphicon glyphicon-plus"></span> Add News
+        </button>
+
+      </div>
+    </div>
+    <hr>
+    <!-- Modal -->
+    <div class="modal fade " id="NewsInputModel" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add-News</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="subjectLine">News Subject</label>
+                <input type="text" class="form-control" id="subjectLine">
+                <small id="emailHelp" class="form-text text-muted">One line description of News to be published</small>
+              </div>
+
+              <div class="form-group">
+                <label for="newsBody">News Content</label>
+                <textarea class="form-control" id="newsBody" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="saveModel">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container-fluid ">
+      <div class="col-sm-2 sidenav">
+        <div class="" style="overflow:hidden;">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-8">
+                <div id="datetimepicker12" style="font-size:8px;padding: .1em .1em 0;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-8  container">
+        <div class="row">
+          <div class="col-sm-12 page-header" style="margin-top: 0px;padding-top: 0px;">
+            <h1>News Feed</h1>
+          </div>
+          <div class="col-sm-12 " id="displayNews">
+
+          </div>
+        </div>
+        <div id="page-selection" class="col-sm-12 text-center"></div>
+
+      </div>
+
+      <div class="col-sm-2 container-fluid">
+        <form class="form-inline">
+          <div class="form-group">
+            <label class="control-label" for="inputPerLine">Items/page </label>
+            <input type="text" class="form-control" id="inputPerLine" style="width: 50px" placeholder="10">
+            <button type="submit" id= "pageItem" class="btn btn-info"> >> </button>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+
+    <!--Modal to display information on click of news-->
+    <div class="modal fade " id="displayNewsFeed" role="dialog" aria-labelledby="displayModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="overflow:hidden">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="displayModalLabel">News</h4>
+          </div>
+          <div class="modal-body" style=" overflow-y: scroll;">
+            <div id="displayNewsSubject">
+
+            </div>
+            <div id="displayNewsBody">
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+  !function (A, n, g, u, l, a, r) {
+    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+        (A[l].q = A[l].q || []).push(arguments)
+      }, A[l].l = +new Date, a = n.createElement(g),
+      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+  }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+</script>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<!--<script type="text/javascript" src="/bower_components/jquery/jquery.min.js"></script>-->
+<script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
+<!--<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<script type="text/javascript"
+        src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/bower_components/bootpag/jquery.bootpag.js"></script>
+<!--<script src="//raw.github.com/botmonster/jquery-bootpag/master/lib/jquery.bootpag.min.js"></script>-->
+
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+
+<script src="scripts/news.js"></script>
+
+
+<!-- endbuild -->
+</body>
+</html>
