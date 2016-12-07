@@ -12,10 +12,7 @@ body {
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+
 
 /* Custom page header */
 .header {
@@ -30,12 +27,7 @@ body {
   padding-bottom: 19px;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
+
 
 .container-narrow > hr {
   margin: 30px 0;
@@ -68,10 +60,7 @@ body {
   /* Remove the padding we set earlier */
   .header,
   .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+ 
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
@@ -89,11 +78,19 @@ body {
     }
     
     /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
+    .footer {
+      background-color: #101010;
+      padding: 20px;
+	  position:absolute;
+	  bottom:0px;
+	  color:white;
+	  width:100%;
     }
     
+   .carousel-inner {
+      background-color: white;
+	  
+    }
   .carousel-inner img {
       width: 100%; /* Set width to 100% */
       margin: auto;
@@ -106,4 +103,261 @@ body {
       display: none; 
     }
   }
-  
+    .carousel-inner > .item > img  {
+      height: 500px;
+      width: 100%;
+      object-fit: contain;
+      overflow: hidden;
+      object-position: 50%;
+		margin: 0 auto;
+
+    }
+
+    .carousel-caption {
+      background: rgba(	255,255,255, 0.3);
+	  color: black;
+    }
+.carousel-control.right{
+background-image: linear-gradient(to right, rgba(0, 0, 130, .0001) 0%, rgba(53,	140,206, .7) 100%);
+}
+.carousel-control.left{
+background-image: linear-gradient(to left, rgba(0, 0, 130, .0001) 0%, rgba(53,	140,206, .7) 100%);
+}
+   .jumbotron {
+      background: #358CCE;
+      color: #FFF;
+      border-radius: 0px;
+    }
+    .jumbotron-sm { padding-top: 24px;
+      padding-bottom: 24px; }
+    .jumbotron small {
+      color: #FFF;
+    }
+   h3 {
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .container {
+            max-width: 970px;
+        }
+        
+        div[class*='col-'] {
+            padding: 0 30px;
+        }
+        
+        .wrap {
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+        }
+        
+        a:focus,
+        a:hover,
+        a:active {
+            outline: 0;
+            text-decoration: none;
+        }
+        
+        .panel {
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: #fff;
+            background: none;
+            box-shadow: none;
+        }
+        
+        .panel:last-child {
+            border-bottom: none;
+        }
+        
+        .panel-group > .panel:first-child .panel-heading {
+            border-radius: 4px 4px 0 0;
+        }
+        
+        .panel-group .panel {
+            border-radius: 0;
+        }
+        
+        .panel-group .panel + .panel {
+            margin-top: 0;
+        }
+        
+        .panel-heading {
+            background-color: #0072AE;
+            border-radius: 0;
+            border: none;
+            color: #fff;
+            padding: 0;
+        }
+        
+        .panel-title a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            position: relative;
+            font-size: 22px;
+            font-weight: 400;
+        }
+        
+        .panel-body {
+            background: #fff;
+        }
+        
+        .panel:last-child .panel-body {
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .panel:last-child .panel-heading {
+            border-radius: 0 0 4px 4px;
+            transition: border-radius 0.3s linear 0.2s;
+        }
+        
+        .panel:last-child .panel-heading.active {
+            border-radius: 0;
+            transition: border-radius linear 0s;
+        }
+        /* #bs-collapse icon scale option */
+        
+        .panel-heading a:before {
+            content: '\e146';
+            position: absolute;
+            font-family: 'Material Icons';
+            right: 5px;
+            top: 10px;
+            font-size: 24px;
+            transition: all 0.5s;
+            transform: scale(1);
+        }
+        
+        .panel-heading.active a:before {
+            content: ' ';
+            transition: all 0.5s;
+            transform: scale(0);
+        }
+        
+        #bs-collapse .panel-heading a:after {
+            content: ' ';
+            font-size: 24px;
+            position: absolute;
+            font-family: 'Material Icons';
+            right: 5px;
+            top: 10px;
+            transform: scale(0);
+            transition: all 0.5s;
+        }
+        
+        #bs-collapse .panel-heading.active a:after {
+            content: '\e909';
+            transform: scale(1);
+            transition: all 0.5s;
+        }
+        /* #accordion rotate icon option */
+        
+        #accordion .panel-heading a:before {
+            content: '\e316';
+            font-size: 24px;
+            position: absolute;
+            font-family: 'Material Icons';
+            right: 5px;
+            top: 10px;
+            transform: rotate(180deg);
+            transition: all 0.5s;
+        }
+        
+        #accordion .panel-heading.active a:before {
+            transform: rotate(0deg);
+            transition: all 0.5s;
+        }
+
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+.social-network a.icoRss:hover {
+	background-color: #F56505;
+}
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover {
+	background-color:#BD3518;
+}
+.social-network a.icoVimeo:hover {
+	background-color:#0590B8;
+}
+.social-network a.icoLinkedin:hover {
+	background-color:#007bb7;
+}
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+	color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+.footer a {
+ background-color: #101010;   
+}

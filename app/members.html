@@ -9,12 +9,13 @@
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
-  <style>
+ <style>
     .jumbotron {
       background: #358CCE;
       color: #FFF;
@@ -25,13 +26,19 @@
     .jumbotron small {
       color: #FFF;
     }
+	
+	  /* Set black background color, white text and some padding */
+    footer {
+      background-color: #101010;
+      color: white;
+      padding: 25px;
+    }
+	
     .h1 {
       font-size: 24px;
       float:left;
-
     }
   </style>
-
 
 </head>
 <body ng-app="circleKApp">
@@ -48,17 +55,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a  href="#"><img class="brand-image" src="images/Trans.png" alt="Circle-K "
+      <a  href="index.html"><img class="brand-image" src="images/Trans.png" alt="Circle-K "
                                             style="height:45px;margin-top: 3px;margin-right: 15px"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li ><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
+      
         <li class="active"><a href="members.html">Members</a></li>
         <li><a href="news.html">News and Events</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact us</a></li>
+	<li><a href="faq.html">FAQs</a></li>      
+	  <li><a href="contact.html">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -73,9 +81,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-12">
-          <img src="images/Trans.png" class="img-fluid "  alt="Image not found">
           <h1 class="media-heading">Circle-K Team</h1>
-          <p>We're smart, we're young, we're beautiful</p>
+          <h4>We're smart, we're young, we're beautiful !<h4>
         </div>
       </div>
     </div>
@@ -205,7 +212,15 @@
 <br><br><br>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <div class="col-md-12">
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>				
+				</div>
 </footer>
 
 
