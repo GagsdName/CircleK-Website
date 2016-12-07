@@ -21,7 +21,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-	
+
   </head>
   <body ng-app="circleKApp">
     <!--[if lte IE 8]>
@@ -29,31 +29,32 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li ><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="members.html">Members</a></li>
-		<li class="active"><a href="events.html">News and Events</a></li>
-		<li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact us</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="" href="#"><img class="brand-image" src="images/Trans.png" alt="Circle-K "
+                                    style="height:45px;margin-top: 3px;margin-right: 15px"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li ><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li class="active"><a href="news.html">News and Events</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 <div class="sub-content-container">
 	<h2 class="sub-content-title">News and Events</h2>
@@ -145,7 +146,7 @@ function deleteEvent(event) {
 			break;
 		}
 	}
-	
+
 	$('#calendar').data('calendar').setDataSource(dataSource);
 }
 
@@ -157,7 +158,7 @@ function saveEvent() {
 		startDate: $('#event-modal input[name="event-start-date"]').datepicker('getDate'),
 		endDate: $('#event-modal input[name="event-end-date"]').datepicker('getDate')
 	}
-	
+
 	var dataSource = $('#calendar').data('calendar').getDataSource();
 
 	if(event.id) {
@@ -178,13 +179,13 @@ function saveEvent() {
 				newId = dataSource[i].id;
 			}
 		}
-		
+
 		newId++;
 		event.id = newId;
-	
+
 		dataSource.push(event);
 	}
-	
+
 	$('#calendar').data('calendar').setDataSource(dataSource);
 	$('#event-modal').modal('hide');
 }
@@ -192,7 +193,7 @@ function saveEvent() {
 $(function() {
 	var currentYear = new Date().getFullYear();
 
-	$('#calendar').calendar({ 
+	$('#calendar').calendar({
 		enableContextMenu: true,
 		enableRangeSelection: true,
 		contextMenuItems:[
@@ -211,21 +212,21 @@ $(function() {
 		mouseOnDay: function(e) {
 			if(e.events.length > 0) {
 				var content = '';
-				
+
 				for(var i in e.events) {
 					content += '<div class="event-tooltip-content">'
 									+ '<div class="event-name" style="color:' + e.events[i].color + '">' + e.events[i].name + '</div>'
 									+ '<div class="event-location">' + e.events[i].location + '</div>'
 								+ '</div>';
 				}
-			
-				$(e.element).popover({ 
+
+				$(e.element).popover({
 					trigger: 'manual',
 					container: 'body',
 					html:true,
 					content: content
 				});
-				
+
 				$(e.element).popover('show');
 			}
 		},
@@ -310,7 +311,7 @@ $(function() {
 			}
 		]
 	});
-	
+
 	$('#save-event').click(function() {
 		saveEvent();
 	});

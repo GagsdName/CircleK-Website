@@ -59,10 +59,6 @@
 
     }
 
-    snapshot p {
-      display: inline-block;
-    }
-
     .truncate {
       white-space: nowrap;
       width: 100px;
@@ -88,7 +84,7 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -96,14 +92,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="" href="#"><img class="brand-image" src="images/Trans.png" alt="Circle-K "
+                                style="height:45px;margin-top: 3px;margin-right: 15px"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
+        <li ><a href="index.html">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="members.html">Members</a></li>
-        <li><a href="events.html">News and Events</a></li>
+        <li class="active"><a href="news.html">News and Events</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact us</a></li>
       </ul>
@@ -113,6 +110,7 @@
     </div>
   </div>
 </nav>
+
 
 
 <div class="jumbotron jumbotron-sm">
@@ -142,7 +140,7 @@
         </button>
 
       </div>
-    </div>
+      <div class="col-xs-12" style="height:30px;"></div>
     <hr>
     <!-- Modal -->
     <div class="modal fade " id="NewsInputModel" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -176,13 +174,13 @@
 
       </div>
     </div>
-    <div class="container-fluid ">
-      <div class="col-sm-2 sidenav">
+    <div class="container-fluid " >
+      <div class="col-sm-2 sidenav" style="float:left">
         <div class="" style="overflow:hidden;">
           <div class="form-group">
             <div class="row">
               <div class="col-md-8">
-                <div id="datetimepicker12" style="font-size:8px;padding: .1em .1em 0;"></div>
+                <div id="datetimepicker12" style="font-size:10px;"></div>
               </div>
             </div>
           </div>
@@ -190,7 +188,7 @@
       </div>
 
 
-      <div class="col-sm-8  container">
+      <div class="col-sm-8 container-fluid" >
         <div class="row">
           <div class="col-sm-12 page-header" style="margin-top: 0px;padding-top: 0px;">
             <h1>News Feed</h1>
@@ -203,11 +201,11 @@
 
       </div>
 
-      <div class="col-sm-2 container-fluid">
+      <div class="col-sm-2 container-fluid sidenav">
         <form class="form-inline">
           <div class="form-group">
             <label class="control-label" for="inputPerLine">Items/page </label>
-            <input type="text" class="form-control" id="inputPerLine" style="width: 50px" placeholder="10">
+            <input type="text" class="form-control" id="inputPerLine" style="width: 60px" placeholder="10">
             <button type="submit" id= "pageItem" class="btn btn-info"> >> </button>
 
           </div>
@@ -245,6 +243,11 @@
 
 
 </div>
+
+
+
+
+
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>

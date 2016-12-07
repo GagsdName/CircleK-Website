@@ -34,5 +34,9 @@
   },
   "scripts": {
     "test": "karma start test\\karma.conf.js"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.12",
+    "mongoose": "^4.5.8"
   }
 }
