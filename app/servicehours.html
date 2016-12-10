@@ -1,71 +1,29 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(.) styles/vendor.css -->
-  <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet"
-        href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild -->
-  <style>
-    button.accordion {
-      background-color: #eee;
-      color: #444;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-      transition: 0.4s;
-    }
+    <meta charset="UTF-8">
+    <title><!doctype html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
 
-    button.accordion.active, button.accordion:hover {
-      background-color: #ddd;
-    }
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/bower_components/bootstrap-fileinput/css/fileinput.css"/>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
 
-    button.accordion:after {
-      content: '\02795';
-      font-size: 13px;
-      color: #777;
-      float: right;
-      margin-left: 5px;
-    }
+        <!-- endbuild -->
 
-    button.accordion.active:after {
-      content: "\2796";
-    }
-
-    div.panel {
-      padding: 0 18px;
-      background-color: white;
-      max-height: 0;
-      overflow: hidden;
-      transition: 0.6s ease-in-out;
-      opacity: 0;
-    }
-
-    div.panel.show {
-      opacity: 1;
-      max-height: 500px;
-    }
-  </style>
-
-
-</head>
-
+      </head>
 <body ng-app="circleKApp">
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -91,8 +49,8 @@
         <li><a href="members.html">Members</a></li>
         <li><a href="news.html">News and Events</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li  class="active"><a href="faq.html">FAQs</a></li>
-        <li class="dropdown">
+        <li><a href="faq.html">FAQs</a></li>
+        <li class="dropdown active" >
           <a class="dropdown-toggle " data-toggle="dropdown" href="#">Resources
             <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -100,7 +58,7 @@
             <li><a href="servicehours.html">Service Hours</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact us</a></li>
+        <li ><a href="contact.html">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -114,47 +72,31 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12">
-        <h1 class="h1">Frequently Asked Questions </h1>
+        <h1 class="h1">Service hours</h1>
       </div>
     </div>
   </div>
 </div>
-<h2>Here are some of the frequently asked questions - </h2>
-<br><br>
-<button class="accordion">Section 1</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.</p>
+
+<div class="container">
+  <div class="pull-right">
+    <label class="control-label">Select File</label>
+    <input id="test" type="file" class="file" data-show-preview="false" >
+    <script>
+      $(document).on('ready', function() {
+        alert($("#test").fileinput().val());
+      });
+    </script>
+
+  </div>
+
+
+
 </div>
 
-<button class="accordion">Section 2</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.</p>
-</div>
 
-<button class="accordion">Section 3</button>
-<div id="foo" class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat.</p>
-</div>
 
-<script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function () {
-      this.classList.toggle("active");
-      this.nextElementSibling.classList.toggle("show");
-    }
-  }
-</script>
-
-<footer class="footer" style="position: relative;">
+<footer class="footer" >
   <div class="container-fluid text-center">
     <div class="col-md-12">
       <ul class="social-network social-circle">
@@ -167,9 +109,6 @@
     </div>
   </div>
 </footer>
-
-</body>
-</html>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -196,8 +135,7 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/moment/moment.js"></script>
-<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/bower_components/bootstrap-fileinput/js/fileinput.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -206,5 +144,11 @@
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <!-- endbuild -->
+</body>
+</html>
+</title>
+</head>
+<body>
+
 </body>
 </html>

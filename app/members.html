@@ -8,42 +8,47 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
- <style>
+  <style>
     .jumbotron {
       background: #358CCE;
       color: #FFF;
       border-radius: 0px;
     }
-    .jumbotron-sm { padding-top: 24px;
-      padding-bottom: 24px; }
+
+    .jumbotron-sm {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
     .jumbotron small {
       color: #FFF;
     }
-	
-	  /* Set black background color, white text and some padding */
+
+    /* Set black background color, white text and some padding */
     footer {
       background-color: #101010;
       color: white;
       padding: 25px;
     }
-	
+
     .h1 {
       font-size: 24px;
-      float:left;
+      float: left;
     }
   </style>
 
 </head>
 <body ng-app="circleKApp">
 <!--[if lte IE 8]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <!-- Add your site or application content here -->
@@ -55,18 +60,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a  href="index.html"><img class="brand-image" src="images/Trans.png" alt="Circle-K "
-                                            style="height:45px;margin-top: 3px;margin-right: 15px"></a>
+      <a href="index.html"><img class="brand-image" src="images/Trans.png" alt="Circle-K "
+                                style="height:45px;margin-top: 3px;margin-right: 15px"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li ><a href="index.html">Home</a></li>
-      
+        <li><a href="index.html">Home</a></li>
+
         <li class="active"><a href="members.html">Members</a></li>
         <li><a href="news.html">News and Events</a></li>
         <li><a href="blog.html">Blog</a></li>
-	<li><a href="faq.html">FAQs</a></li>      
-	  <li><a href="contact.html">Contact us</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle " data-toggle="dropdown" href="#">Resources
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="membership.html">Membership Form</a></li>
+            <li><a href="servicehours.html">Service Hours</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -76,7 +89,7 @@
 </nav>
 
 
-<section id="page" >
+<section id="page">
   <div class="jumbotron jumbotron-sm">
     <div class="container">
       <div class="row">
@@ -94,7 +107,7 @@
 
       <div class="row mb30">
         <div class="col-xs-2">
-          <img src="images/Sam_Stratton.png" class="img-thumbnail imgBorder rounded center-block" alt="Image not found" >
+          <img src="images/Sam_Stratton.png" class="img-thumbnail imgBorder rounded center-block" alt="Image not found">
         </div>
         <div class="col-xs-10">
           <h3>Sam Stratton &mdash; River Valley Lieutenant Governor</h3>
@@ -110,7 +123,8 @@
 
       <div class="row mb30">
         <div class="col-xs-2">
-          <img src="images/ash_bos.jpg" class="img-thumbnail imgBorder rounded " alt="Image not found" style="vertical-align: middle">
+          <img src="images/ash_bos.jpg" class="img-thumbnail imgBorder rounded " alt="Image not found"
+               style="vertical-align: middle">
         </div>
         <div class="col-xs-10">
           <h3>Ashley Booe &mdash; President</h3>
@@ -132,7 +146,8 @@
           <h3>Catherine Morgan &mdash; Secretary</h3>
           <p><b>Year : </b>Junior </p>
           <p><b>Area of Study :</b> Biochemistry BS with an Environmental Science minor</p>
-          <p><b>Fun Fact: </b>I sail with my father competitively. I also love animals and just got a cat named Cruella. </p>
+          <p><b>Fun Fact: </b>I sail with my father competitively. I also love animals and just got a cat named Cruella.
+          </p>
         </div>
       </div>
 
@@ -142,17 +157,19 @@
 
       <div class="row mb30">
         <div class="col-xs-2">
-          <img src="images/lyn_jon.png" style="vertical-align: middle" class="img-thumbnail imgBorder rounded " alt="Image not found">
+          <img src="images/lyn_jon.png" style="vertical-align: middle" class="img-thumbnail imgBorder rounded "
+               alt="Image not found">
         </div>
         <div class="col-xs-10">
           <h3>Lyndsay Jones &mdash; Social Chair</h3>
           <p><b>Year : </b>Junior </p>
           <p><b>Area of Study :</b> Healthcare Administration and Policy</p>
-          <p><b>Fun Facts: </b> <ul>
-              <li>I can play 3 instruments</li>
-              <li>Shakira's song "My Hips Don't Lie" doesn't apply to me because my hips acually do lie.</li>
-              <li>I met Trace Adkins in person once.</li>
-             </ul>
+          <p><b>Fun Facts: </b>
+          <ul>
+            <li>I can play 3 instruments</li>
+            <li>Shakira's song "My Hips Don't Lie" doesn't apply to me because my hips acually do lie.</li>
+            <li>I met Trace Adkins in person once.</li>
+          </ul>
           </p>
         </div>
       </div>
@@ -170,13 +187,15 @@
 
           <p><b>Year : </b>Sophomore </p>
           <p><b>Area of Study :</b>Marketing and Sales</p>
-          <p><b>Fun Facts: </b> <ul>
-              <li>I was once hit by a car. Needless to say, I lost that fight.</li>
-              <li>I enjoy writing far more than anyone should.</li>
-              <li>No, I am not Justin Beiber, Bo Burnham, Drake Bell, or any of the other 1000 people I look like.</li>
-            </ul>
+          <p><b>Fun Facts: </b>
+          <ul>
+            <li>I was once hit by a car. Needless to say, I lost that fight.</li>
+            <li>I enjoy writing far more than anyone should.</li>
+            <li>No, I am not Justin Beiber, Bo Burnham, Drake Bell, or any of the other 1000 people I look like.</li>
+          </ul>
           </p>
-          <p><b>Hobbies : </b>Running, Long Walks on the Beach, Video Games, Writing, Occasional Not So Long Walks on the Beach, Olive Garden.
+          <p><b>Hobbies : </b>Running, Long Walks on the Beach, Video Games, Writing, Occasional Not So Long Walks on
+            the Beach, Olive Garden.
           </p>
         </div>
       </div>
@@ -199,37 +218,36 @@
       </div>
 
 
-
     </div>
   </section>
-
 
 
 </section>
 
 
-
 <br><br><br>
 
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center" style="position: relative">
   <div class="col-md-12">
-                    <ul class="social-network social-circle">
-                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>				
-				</div>
+    <ul class="social-network social-circle">
+      <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+      <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+      <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
 </footer>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
-  !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-      (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-    r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-  }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  !function (A, n, g, u, l, a, r) {
+    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+        (A[l].q = A[l].q || []).push(arguments)
+      }, A[l].l = +new Date, a = n.createElement(g),
+      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+  }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-XXXXX-X');
   ga('send', 'pageview');

@@ -14,7 +14,7 @@ $( "#saveModel" ).click(function() {
 
     $("#displayNews").prepend("" +
       "<div class=\"snapshot truncate\">" +
-      "<h3><b>" + subjectLineText + "</b></h3>" +
+      "<h2><b>" + subjectLineText + "</b></h2>" +
       "<article><p>" + newsMessageBody + "</p></article>" +
       "</div>");
 
@@ -32,7 +32,7 @@ $( "#saveModel" ).click(function() {
 });
 
 $(document).on('click', ".snapshot", function() {
-  subjetLine = $(this).find("h3").text();
+  subjetLine = $(this).find("h2").text();
   messageBody = $(this).find("p").text();
 
   $("#displayNewsSubject").html("<h2>"+subjetLine+"</h2>");

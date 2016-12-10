@@ -19,7 +19,7 @@ $("#saveModel").click(function () {
 
   $("#displayBlog").prepend("" +
     "<div class=\"snapshot \">" +
-    "<h3><b>" + subjectLineText + "</b></h3>" +
+    "<h4><b>" + subjectLineText + "</b></h4>" +
     "<h5><span class=\"glyphicon glyphicon-time\"></span> Created at " + currentDateTime.toDateString() + "</h5>" + "<h5>" +
     getTagColor(tagList) +"</h5>" + "<br>" +
     "<article><p>" + newsMessageBody + "</p></article>" +
@@ -82,7 +82,7 @@ $(document).on('click', ".snapshot", function() {
   console.log(tags);
   messageBody = $(this).find("p").html();
 
-  $("#displayModalLabel").html("<h3>"+subjetLine+"</h3>");
+  $("#displayModalLabel").html("<h4>"+subjetLine+"</h4>");
   $("#displayBlogCreation").html(creationLine);
   $("#displayBlogTags").html(tags);
   $("#displayBlogMessage").html(messageBody);

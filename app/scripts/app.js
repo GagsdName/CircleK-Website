@@ -34,13 +34,3 @@ angular
       });
   });
 
-
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
- 
-var GameSchema = new Schema({
-  name: String,
- 
-});
- 
-module.exports = mongoose.model('User', GameSchema);
