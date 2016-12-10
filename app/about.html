@@ -8,13 +8,16 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
+   
   <!-- endbuild -->
+
 
 </head>
 <body ng-app="circleKApp">
@@ -24,7 +27,7 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<nav class="navbar navbar-inverse ">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -32,26 +35,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.html"><img class="brand-image" src="images/Trans.png" alt="Circle-K "
-                                style="height:45px;margin-top: 3px;margin-right: 15px"></a>
+      <a class="" href="index.html"><img class="brand-image" src="images/Trans.png" alt="Circle-K "
+                                         style="height:45px;margin-top: 3px;margin-right: 15px"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-		<li><a href="about.html">About Us</a></li>
+        <li ><a href="index.html">Home</a></li>
+		 <li class="active"><a href="about.html">About Us</a></li>
         <li><a href="members.html">Members</a></li>
         <li><a href="news.html">News and Events</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="faq.html">FAQs</a></li>
-        <li class="dropdown active" >
-          <a class="dropdown-toggle " data-toggle="dropdown" href="#" >Resources
+        <li class="dropdown">
+          <a class="dropdown-toggle " data-toggle="dropdown" href="#">Resources
             <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="membership.html">Membership Form</a></li>
             <li><a href="servicehours.html">Service Hours</a></li>
           </ul>
         </li>
-        <li ><a href="contact.html">Contact us</a></li>
+        <li><a href="contact.html">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -60,42 +63,39 @@
   </div>
 </nav>
 
-
 <div class="jumbotron jumbotron-sm">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-lg-12">
-        <h1 class="h1">Membership Form </h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">About us</h1>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+<div id="about" class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				
+				<h3>IU Chapter</h3>
 
-<div class="container">
-  <div class="pull-right">
-      <button id="memForm"class="btn btn-info"><span class="btn-label" onClick="location.href='images/MembershipForm2016.docx.docx'"><i class="glyphicon glyphicon-download"></i> </span>Download
-        Form
-      </button>
+				<p>Circle K is a service and leadership club at Indiana University. We are part of the largest collegiate service organization in the world and we strive to make a difference in our community, our state and our world. The club holds and participates in a variety of service projects around the Bloomington area; our service ranges from work with animal shelters to working with Big Brothers Big Sisters to helping out at local food banks. We also hold fun fellowship events for members- we want everyone in the club to feel like they have found their group of friends!</p>
+												 
+			
+				
+				<h3>Circle K International</h3>
+								
+				<p>Circle K International (CKI) is the premier collegiate and university community service, leadership development, and friendship organization in the world. With more than 13,770 members in 17 nations, CKI is making a positive impact on the world every day.</p>
+				<p>Circle K clubs are organized and sponsored by a Kiwanis club on a college or university campus. CKI is a self-governing organization and elects its own officers, conducts its own meetings, and determines its own service activities.</p>
+				<p>CKI blends community service and leadership training with the opportunity to meet other college students around the world. Projects such as the Six Cents Initiative, CKI’s International fundraiser that aims to provide water to the 2.2 billion children worldwide who lack safe drinking water, bring CKI members together to make a difference in the world.</p>
+				
+				
 
-  </div>
+			</div>
+		</div>
 
-  <div >
-    <h2>Want to Join Circle K?</h2>
-    <br>
-    <p>Welcome! We are always thrilled to get any new members, and it’s never too late to sign up! Simply come to a meeting at 7 PM on Tuesday nights in Ballantine Hall 304. We will give you a membership sign up sheet and once you have filled that out and paid your dues, you’re an official member!
-    </p>
-    <br>
-    <h2>Dues</h2>
-    <br>
-    <p>There is a small fee of $15 for the entire school year. Part of that money goes to the state level of the Circle K organization so that we can continue to be recognized as an official chapter. The rest of the money goes toward purchasing supplies for in-meeting service projects, buying food for special meeting, and reimbursing drivers’ gas money for driving club members without cars to service events.
-    </p>
-    <br><br>
-  </div>
-</div>
+	</div>
 
-
-
-<footer class="footer" >
+<footer class="footer" style="position:relative;">
   <div class="container-fluid text-center">
     <div class="col-md-12">
       <ul class="social-network social-circle">
@@ -134,6 +134,8 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
