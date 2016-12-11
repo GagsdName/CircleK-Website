@@ -461,6 +461,7 @@ a.socialIcon:hover, .socialHoverClass {
 }
 
 .modal-header {
+    text-align: center; 
     min-height: 16.43px;
     padding: 15px 15px 15px 15px;
     border-bottom: 0px;
