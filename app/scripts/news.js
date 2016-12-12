@@ -69,7 +69,6 @@ $('#page-selection').bootpag({
 
 $('#pageItem').click(function () {
   perPage = $("#inputPerLine").val();
-  alert(perPage);
 })
 
 
