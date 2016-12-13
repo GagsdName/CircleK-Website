@@ -16,10 +16,34 @@
   <link rel="stylesheet" href="styles/main.css">
    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- endbuild -->
+<script>
+function setFooter()
+{
+//alert(window.innerHeight);
 
+if(window.innerWidth >= 800 && window.innerHeight >= 600) {
+document.getElementsByTagName("footer")[0].setAttribute("style", "width:"+window.innerWidth); 
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[0].style.minHeight = "815px";
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[1].style.minHeight = "815px";
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[2].style.minHeight = "815px";
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[3].style.minHeight = "815px";
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[4].style.minHeight = "815px";
+}
+else{
+document.getElementsByTagName("footer")[0].setAttribute("style", "width:"+window.innerWidth); 
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[0].style.minHeight = "100px";
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[1].style.minHeight = "100px";
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[2].style.minHeight = "100px";
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[3].style.minHeight = "100px";
+document.getElementsByClassName("carousel-inner")[0].getElementsByTagName("img")[4].style.minHeight = "100px";
+
+}
+}
+
+</script>
 
 </head>
-<body data-ng-app="circleKApp">
+<body data-ng-app="circleKApp" onload="setFooter()">
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
@@ -313,7 +337,7 @@ $(function() {
 
 <br><br><br><br><br>
 
-<footer class="footer" style="position:relative;">
+<footer class="footer" >
   <div class="container-fluid text-center">
     <div class="col-md-12">
       <ul class="social-network social-circle">

@@ -64,9 +64,17 @@
   </style>
 
 
-</head>
+<script>
+function setFooter()
+{
+//alert(window.innerWidth);
+document.getElementsByTagName("footer")[0].setAttribute("style", "width:"+window.innerWidth); 
 
-<body data-ng-app="circleKApp">
+}
+</script>
+
+</head>
+<body data-ng-app="circleKApp" onload="setFooter()">
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
@@ -167,7 +175,7 @@
   }
 </script>
 
-<footer class="footer" style="position: relative;">
+<footer class="footer" >
   <div class="container-fluid text-center">
     <div class="col-md-12">
       <ul class="social-network social-circle">
